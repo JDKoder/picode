@@ -3,6 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Java
+Java/*/target/
+*.class
+
+#intelliJ
+*.iml
+Java/*/.idea/
+
 # C extensions
 *.so
 
