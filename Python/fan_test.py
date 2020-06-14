@@ -18,10 +18,10 @@ pwm.start(dc)                      # Start PWM with 0% duty cycle
 
 try:
   while True:                      # Loop until Ctl C is pressed to stop.
-    if (dc != 100): 
-      for dc in range(50, 101, 5):    # Loop 0 to 100 stepping dc by 5 each loop
+    if (dc != 100):                  # After reaching 100, do not allow re-entry into range loop  
+      for dc in range(50, 101, 5):     # Loop 50 to 100 stepping dc by 5 each loop
         pwm.ChangeDutyCycle(dc)
-        time.sleep(0.1)             # wait .05 seconds at current LED brightness
+        time.sleep(0.1)             # wait .01 seconds at current duty cycle
         print(dc)
       
       
